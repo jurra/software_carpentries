@@ -117,19 +117,6 @@ These exercises can also be found on the SWC website:
 
 14:00: Coffee Break I
 
-**ADDED part on modular code**
-1.	[Tidying-up](https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html#tidying-up)   
-2.	Create script called `processing.py`   
-3.	Copy functions (visualize, detect_problems) to script   
-4.	Create new notebook called `inflammation_analysis_refactored.ipynb`   
-5.	Import (visualize, detect_problems) in the new notebook and place in for-loop to analyse for all files   
-6.	Questions in session:   
-a.	Do we still need to import numpy and matplotlib when we are importing them in the `processing.py` script?    
-_No, this is handled in the script._   
-b.	What happens to the savefig in the loop?    
-_Currently, during each loop the file `imflammation.png` is overwritten. Solution for future sessions: We could add new savenames or leave the savefig out of the functions entirely for simplicity._
-
-
 Resources on structuring python code:
 -	https://realpython.com/absolute-vs-relative-python-imports/
 -	http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/#1
