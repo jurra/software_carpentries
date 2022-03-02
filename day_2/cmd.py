@@ -2,6 +2,8 @@ import sys
 import numpy
 import glob
 
+import os.path
+
 def detect_problems(filename):
     try:
         data = numpy.loadtxt(fname=filename, delimiter=',')
@@ -16,15 +18,20 @@ def detect_problems(filename):
         else:
             print("Data looks OK")
     except:
-        raise NameError "Invalid filename"
+        raise NameError
 
 def say_something(phrase):
     sys.stdout.write(phrase)
     
 def main(filenames_path):
     filenames = glob.glob(filenames_path)
+    assert filenames, "No found files"
     for file in filenames:
-        detect_problems(file)
+        if os.path.isfile(file):
+            detect_problems(file)
+        else:
+            print("File doesnt exist")
+        
 
 if __name__ == "__main__":
     main(sys.argv[1])
